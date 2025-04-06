@@ -4,8 +4,9 @@ import { config } from 'dotenv'
 
 config()
 
-const { PORT } = process.env
+const { PORT, NODE_ENV } = process.env
 const Config = {
-    port: PORT || 3000,
+    PORT: PORT || 3000,
+    NODE_ENV: NODE_ENV,
 }
 export default Config
