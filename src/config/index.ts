@@ -1,4 +1,3 @@
-import { Config } from './../../node_modules/prettier/index.d'
 // import { config } from 'dotenv'
 import { config } from 'dotenv'
 
