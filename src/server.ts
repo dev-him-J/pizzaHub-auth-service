@@ -1,11 +1,16 @@
+import app from './app'
 import Config from './config'
 
-function welcome(name: string) {
-    const user = {
-        name: 'Himanshu',
+const startServer = () => {
+    try {
+        const PORT = Config.PORT
+        app.listen(PORT, () =>
+            console.log(`Server is listening on port ${PORT}`),
+        )
+    } catch (err) {
+        console.error(err)
+        process.exit(1)
     }
-    console.log(Config.port)
-    const u1 = user.name
-    return name + u1
 }
-welcome('Himanshu')
+
+startServer()
